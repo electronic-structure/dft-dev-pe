@@ -1,0 +1,30 @@
+packages:
+    gcc-env:
+      compiler:
+          toolchain: gcc
+          spec: gcc@11
+      unify: true
+      specs:
+      - cuda@11.8
+      - py-mpi4py
+      - python@3.10
+      - py-numpy
+      - py-pybind11
+      - py-pip
+      - cmake
+      - intel-oneapi-mkl
+      - libxc
+      - perl
+      mpi:
+          spec: cray-mpich-binary
+          gpu: Null
+    nvhpc-env:
+      compiler:
+          toolchain: llvm
+          spec: nvhpc@22.11
+      unify: true
+      specs:
+      - libxc%nvhpc ^perl%gcc
+      mpi:
+          spec: cray-mpich-binary
+          gpu: Null
