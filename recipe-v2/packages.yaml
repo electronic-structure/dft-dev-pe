@@ -35,7 +35,8 @@ packages:
           spec: nvhpc@22.11
       unify: true
       specs:
-      - libxc%nvhpc ^perl%gcc@11
+      - libxc%nvhpc
+      - perl%gcc@11
       - intel-oneapi-mkl
       mpi:
           spec: cray-mpich-binary
